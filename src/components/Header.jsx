@@ -1,12 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import './header.css';
 
 function Header() {
   const [activeSection, setActiveSection] = useState('');
   const [isOpen, setIsOpen] = useState(false);
-  const [isReady, setIsReady] = useState(false);
+  const [isReady, setIsReady] = useState(false); // для анимации
 
+  // Активация текущего раздела при скролле
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['projects', 'about', 'contact'];
@@ -27,17 +28,9 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const handleReady = () => {
-      setTimeout(() => setIsReady(true), 100);
-    };
-
-    if (document.readyState === 'complete') {
-      handleReady();
-    } else {
-      window.addEventListener('load', handleReady);
-      return () => window.removeEventListener('load', handleReady);
-    }
+  // ⏱ Ждём полной отрисовки DOM, затем запускаем анимацию header
+  useLayoutEffect(() => {
+    setIsReady(true);
   }, []);
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
