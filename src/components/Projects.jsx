@@ -45,7 +45,7 @@ const projects = [
         title: 'Telegram Bot',
         description:
             'A Laravel-based backend project featuring user registration with both Email and Telegram notifications. Integrates Mailtrap for testing email delivery and Telegram Bot API for real-time registration alerts. Includes a test route for Telegram functionality.',
-        link: 'https://github.com/AzaS31/laravel-telegram-bot',
+        link: 'https://github.com/AzaS31/Laravel-Telegram',
         image: '/images/telegram-bot.webp',
         tech: [
             <span title="Laravel">🅻</span>,
