@@ -12,6 +12,7 @@
     z-index: 1000;
     box-sizing: border-box;
     font-size: 20px;
+    padding-right: 30px;
 }
 
 .logo {
@@ -43,6 +44,7 @@
     display: flex;
     gap: 3rem;
     margin-right: 60px;
+    flex-shrink: 0;
 }
 
 .nav a {
@@ -62,7 +64,6 @@
   display: none;
   flex-direction: column;
   cursor: pointer;
-  margin-right: 30px;
   min-width: 40px;
   align-items: flex-end; 
 }
