@@ -20,7 +20,13 @@
     font-size: 20px;
     white-space: nowrap;
     color: #ffffff;
-
+    position: relative;
+    background: linear-gradient(90deg, #ffffff, #4fc3f7, #ffffff);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
 }
 
 @keyframes shine {

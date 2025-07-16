@@ -1,11 +1,9 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import './header.css';
 
 function Header() {
   const [activeSection, setActiveSection] = useState('');
   const [isOpen, setIsOpen] = useState(false);
-  const [isReady, setIsReady] = useState(false); // для анимации
 
   // Активация текущего раздела при скролле
   useEffect(() => {
@@ -28,20 +26,11 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // ⏱ Ждём полной отрисовки DOM, затем запускаем анимацию header
-  useLayoutEffect(() => {
-    setIsReady(true);
-  }, []);
-
   const toggleMenu = () => setIsOpen((prev) => !prev);
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <motion.div
-      initial={{ y: -100, opacity: 0 }}
-      animate={isReady ? { y: 0, opacity: 1 } : {}}
-      transition={{ duration: 0.6 }}
-    >
+    <div>
       <header className="header">
         <div className="logo">Azamat S.</div>
 
@@ -75,7 +64,7 @@ function Header() {
           </a>
         </nav>
       </header>
-    </motion.div>
+    </div>
   );
 }
 
