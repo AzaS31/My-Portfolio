@@ -39,7 +39,6 @@
   line-height: 1.4;
 }
 
-/* ✅ Адаптация под мобильные устройства */
 @media (max-width: 768px) {
   .footer {
     padding: 40px 16px;

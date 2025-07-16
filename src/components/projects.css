@@ -82,7 +82,6 @@
   margin-bottom: 80px;
 }
 
-/* ==== NEW: Tech icons ==== */
 .tech-icons {
   display: flex;
   gap: 12px;
@@ -96,7 +95,6 @@
   align-items: center;
 }
 
-/* ==== Adaptive ==== */
 @media (max-width: 768px) {
   .projects-section {
     padding-top: 100px;

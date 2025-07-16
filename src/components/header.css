@@ -14,7 +14,6 @@
     font-size: 20px;
 }
 
-/* Лого с анимацией */
 .logo {
     margin-left: 20px;
     font-weight: bold;
@@ -22,10 +21,16 @@
     white-space: nowrap;
     color: #ffffff;
     position: relative;
+
     background: linear-gradient(90deg, #ffffff, #4fc3f7, #ffffff);
     background-size: 200%;
+
+    background-clip: text;                
     -webkit-background-clip: text;
+
     -webkit-text-fill-color: transparent;
+    color: transparent;                   
+
     animation: shine 3s linear infinite;
 }
 
@@ -58,7 +63,6 @@
     font-weight: bold;
 }
 
-/* Бургер кнопка */
 .burger {
     display: none;
     flex-direction: column;
@@ -74,7 +78,6 @@
     transition: 0.3s;
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
     .nav {
         position: absolute;
