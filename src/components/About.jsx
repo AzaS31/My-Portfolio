@@ -35,9 +35,11 @@ function About() {
             <p>
               I'm a fullstack web developer who builds modern, responsive, and production-ready applications.
               My stack includes <strong>JavaScript</strong>, <strong>React</strong>, <strong>Node.js</strong>, <strong>Express</strong>, <strong>PostgreSQL</strong>/<strong>MongoDB</strong>, and <strong>Docker</strong>.
+              I develop both the frontend and backend, integrate APIs, and handle full-cycle deployment.
             </p>
             <p>
-              I focus on clean and functional user experiences, whether it's admin panels, landing pages, or complex dashboards.
+              I'm passionate about delivering clean and functional user experiences, and I always focus on solving real problems.
+              Whether it's creating admin panels, landing pages, or complex dashboards — I can take your project from idea to production.
             </p>
             <div className="tech-icons">
               <SiJavascript title="JavaScript" />
