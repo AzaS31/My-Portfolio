@@ -57,20 +57,15 @@ const projects = [
 
 function Projects() {
     const [xOffset, setXOffset] = useState(1000);
+    const [loadedImages, setLoadedImages] = useState({});
 
     useEffect(() => {
         const handleResize = () => {
-            const width = window.innerWidth;
-            if (width < 1024) {
-                setXOffset(300);
-            } else {
-                setXOffset(1000);
-            }
+            setXOffset(window.innerWidth < 1024 ? 300 : 1000);
         };
 
         handleResize();
         window.addEventListener('resize', handleResize);
-
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
@@ -79,17 +74,16 @@ function Projects() {
             <div className="projects-list">
                 {projects.map((project, index) => {
                     const isEven = index % 2 === 0;
+                    const isLoaded = loadedImages[index];
 
                     return (
                         <motion.div
                             key={index}
                             className="project-full"
-                            initial={{ opacity: 0, x: isEven ? -200 : 200 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, x: isEven ? -xOffset : xOffset }}
+                            animate={isLoaded ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.8, delay: index * 0.2 }}
-                            viewport={{ once: true }}
                         >
-
                             <div className="project-inner">
                                 {isEven ? (
                                     <>
@@ -102,32 +96,40 @@ function Projects() {
                                                 ))}
                                             </div>
                                             <div className="project-links">
-                                                <a
-                                                    href={project.link}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    Code
-                                                </a>
+                                                <a href={project.link} target="_blank" rel="noopener noreferrer">Code</a>
                                                 {project.link2 && (
-                                                    <a
-                                                        href={project.link2}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                    >
-                                                        Demo
-                                                    </a>
+                                                    <a href={project.link2} target="_blank" rel="noopener noreferrer">Demo</a>
                                                 )}
                                             </div>
                                         </div>
                                         <div className="project-image">
-                                            <img src={project.image} alt={project.title} />
+                                            <img
+                                                src={project.image}
+                                                alt={project.title}
+                                                onLoad={() =>
+                                                    setLoadedImages(prev => ({ ...prev, [index]: true }))
+                                                }
+                                                style={{
+                                                    opacity: isLoaded ? 1 : 0,
+                                                    transition: 'opacity 0.3s ease'
+                                                }}
+                                            />
                                         </div>
                                     </>
                                 ) : (
                                     <>
                                         <div className="project-image">
-                                            <img src={project.image} alt={project.title} />
+                                            <img
+                                                src={project.image}
+                                                alt={project.title}
+                                                onLoad={() =>
+                                                    setLoadedImages(prev => ({ ...prev, [index]: true }))
+                                                }
+                                                style={{
+                                                    opacity: isLoaded ? 1 : 0,
+                                                    transition: 'opacity 0.3s ease'
+                                                }}
+                                            />
                                         </div>
                                         <div className="project-text">
                                             <h3>{project.title}</h3>
@@ -138,13 +140,7 @@ function Projects() {
                                                 ))}
                                             </div>
                                             <div className="project-links">
-                                                <a
-                                                    href={project.link}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    Code
-                                                </a>
+                                                <a href={project.link} target="_blank" rel="noopener noreferrer">Code</a>
                                             </div>
                                         </div>
                                     </>
