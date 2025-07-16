@@ -25,7 +25,7 @@ function About() {
       >
         <div className="about-inner">
           <div className="about-image">
-            <img src="/images/man.jpg" alt="About Me" />
+            <img src="/images/man.webp" alt="About Me" />
           </div>
           <div className="about-content">
             <h2>About Me</h2>

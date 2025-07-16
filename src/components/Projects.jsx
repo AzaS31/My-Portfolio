@@ -18,7 +18,7 @@ const projects = [
             'A dynamic web app for randomly selecting FIFA teams based on user-selected leagues and star ratings. Built with Express.js and React, featuring animated UI, league filtering, and responsive design. Deployed on a custom domain with full backend integration.',
         link: 'https://github.com/AzaS31/Teampicker_Express.js_React',
         link2: 'https://teampicker.me',
-        image: '/images/teampicker.png',
+        image: '/images/teampicker.webp',
         tech: [
             <SiReact title="React" />,
             <SiNodedotjs title="Node.js" />,
@@ -32,7 +32,7 @@ const projects = [
         description:
             'A fullstack user management system with authentication (JWT), registration, and CRUD operations. Built using Express.js, MongoDB, and React. Features protected routes, role-based access control, modern UI, API documentation with Swagger, and full Docker containerization for both backend and frontend.',
         link: 'https://github.com/AzaS31/usersApp-express-mongodb-react',
-        image: '/images/user-management.png',
+        image: '/images/user-management.webp',
         tech: [
             <SiReact title="React" />,
             <SiNodedotjs title="Node.js" />,
