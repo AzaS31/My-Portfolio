@@ -1,0 +1,60 @@
+.footer {
+  background-color: #1e1e1e;
+  padding: 60px 20px;
+  color: #ccc;
+  text-align: center;
+}
+
+.footer h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin: 8px 0;
+}
+
+.footer a {
+  color: #4fc3f7;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.8rem;
+  flex-wrap: wrap;
+}
+
+.footer-info {
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* ✅ Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 16px;
+  }
+
+  .footer h2 {
+    font-size: 1.6rem;
+  }
+
+  .footer-icons {
+    gap: 16px;
+    font-size: 1.5rem;
+  }
+
+  .footer-info {
+    font-size: 0.95rem;
+  }
+}

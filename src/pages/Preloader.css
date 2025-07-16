@@ -1,0 +1,21 @@
+.preloader-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #0a0a0a;
+  color: white;
+  font-family: 'Arial Black', sans-serif;
+}
+
+.preloader-word {
+  font-size: 4rem;
+  letter-spacing: 8px;
+}
+
+.loading-text {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #888;
+}

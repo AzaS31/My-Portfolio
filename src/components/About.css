@@ -1,0 +1,80 @@
+.about-section {
+  background-color: #ffffff;
+}
+
+.about-card {
+  width: 80%;
+  margin: 0 auto 80px auto;
+  background-color: #1e1e1e;
+  border-radius: 24px;
+  padding: 60px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.about-content p {
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #ccc;
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 1.8rem;
+  margin-top: 20px;
+  color: #4fc3f7;
+}
+
+/* ✅ Адаптив */
+@media (max-width: 768px) {
+  .about-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .tech-icons {
+    justify-content: center;
+  }
+
+  .about-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+}
