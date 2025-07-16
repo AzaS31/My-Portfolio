@@ -15,30 +15,30 @@
 }
 
 .logo {
-  margin-left: 20px;
-  font-weight: bold;
-  font-size: 20px;
-  white-space: nowrap;
-  color: #ffffff;
-  position: relative;
-  background: linear-gradient(90deg, #ffffff, #4fc3f7, #ffffff);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  background-clip: text; 
-  -webkit-text-fill-color: transparent;
-  animation: shine 3s linear infinite;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    white-space: nowrap;
+    color: #ffffff;
+    position: relative;
+    background: linear-gradient(90deg, #ffffff, #4fc3f7, #ffffff);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
 }
 
 @keyframes shine {
     0% {
         background-position: -100% 0;
     }
+
     100% {
         background-position: 200% 0;
     }
 }
 
-/* Навигация по умолчанию */
 .nav {
     display: flex;
     gap: 3rem;
@@ -74,6 +74,13 @@
 }
 
 @media (max-width: 768px) {
+    .logo {
+        background: none;
+        -webkit-text-fill-color: #fff;
+        color: #fff;
+        animation: none;
+    }
+
     .nav {
         position: absolute;
         top: 100%;
