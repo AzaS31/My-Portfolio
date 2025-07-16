@@ -11,7 +11,7 @@ import {
   SiCss3,
   SiMysql,
 } from 'react-icons/si';
-import './About.css';
+import './about.css';
 
 function About() {
   return (

@@ -9,7 +9,7 @@ import {
     SiCss3,
     SiMysql,
 } from 'react-icons/si';
-import './Projects.css';
+import './projects.css';
 
 const projects = [
     {
