@@ -76,7 +76,6 @@
 @media (max-width: 768px) {
     .logo {
         background: none !important;
-        -webkit-background-clip: initial !important;
         -webkit-text-fill-color: #fff !important;
         color: #fff !important;
         animation: none !important;
