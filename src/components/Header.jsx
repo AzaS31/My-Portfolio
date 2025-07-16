@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import './header.css';
 
 function Header() {
   const [activeSection, setActiveSection] = useState('');
   const [isOpen, setIsOpen] = useState(false);
+  const [isReady, setIsReady] = useState(false); // для запуска анимации
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,11 +30,30 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Ждём полной загрузки страницы, чтобы layout устаканился
+  useEffect(() => {
+    const handleReady = () => {
+      setTimeout(() => setIsReady(true), 100); // короткая задержка
+    };
+
+    if (document.readyState === 'complete') {
+      handleReady();
+    } else {
+      window.addEventListener('load', handleReady);
+      return () => window.removeEventListener('load', handleReady);
+    }
+  }, []);
+
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="header">
+    <motion.header
+      className="header"
+      initial={{ y: -100, opacity: 0 }}
+      animate={isReady ? { y: 0, opacity: 1 } : {}}
+      transition={{ duration: 0.6 }}
+    >
       <div className="logo">Azamat S.</div>
 
       <div className="burger" onClick={toggleMenu}>
@@ -64,8 +85,9 @@ function Header() {
           Contact
         </a>
       </nav>
-    </header>
+    </motion.header>
   );
 }
 
 export default Header;
+
