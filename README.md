@@ -3,7 +3,7 @@
 My personal portfolio website built with React.
 
 ## 🔗 Live Demo
-[Visit the site](https://azamat-portfolio.vercel.app)
+[Visit the site](https://aza-s31.vercel.app)
 
 ## 🛠 Tech Stack
 - React

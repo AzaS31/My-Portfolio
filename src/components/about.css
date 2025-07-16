@@ -4,10 +4,10 @@
 
 .about-card {
   width: 80%;
-  margin: 0 auto 80px auto;
+  margin: 0 auto 60px auto;
   background-color: #1e1e1e;
-  border-radius: 24px;
   padding: 60px 0;
+  border-radius: 24px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -16,21 +16,15 @@
   margin: 0 auto;
   padding: 0 40px;
   display: flex;
-  gap: 40px;
+  justify-content: space-between;
   align-items: center;
+  gap: 40px;
 }
 
-.about-image img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 16px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-.about-content {
+.about-content,
+.about-image {
   flex: 1;
+  min-width: 280px;
 }
 
 .about-content h2 {
@@ -45,29 +39,26 @@
   color: #ccc;
 }
 
-.tech-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  font-size: 1.8rem;
-  margin-top: 20px;
-  color: #4fc3f7;
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-/* ✅ Адаптив */
+/* ✅ Адаптив для about */
 @media (max-width: 768px) {
+  .about-card {
+    width: 90%;
+    padding: 40px 0;
+    margin-bottom: 40px;
+  }
+
   .about-inner {
     flex-direction: column;
     text-align: center;
-  }
-
-  .about-image img {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .tech-icons {
-    justify-content: center;
+    padding: 0 20px;
   }
 
   .about-content h2 {
@@ -76,5 +67,17 @@
 
   .about-content p {
     font-size: 1rem;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .tech-icons {
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-wrap: wrap;
   }
 }

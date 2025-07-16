@@ -32,7 +32,7 @@ const projects = [
         description:
             'A fullstack user management system with authentication (JWT), registration, and CRUD operations. Built using Express.js, MongoDB, and React. Features protected routes, role-based access control, modern UI, API documentation with Swagger, and full Docker containerization for both backend and frontend.',
         link: 'https://github.com/AzaS31/usersApp-express-mongodb-react',
-        image: '/images/user-management2.png',
+        image: '/images/user-management.png',
         tech: [
             <SiReact title="React" />,
             <SiNodedotjs title="Node.js" />,
