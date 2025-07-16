@@ -59,10 +59,12 @@
 }
 
 .burger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    margin-right: 30px;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 30px;
+  min-width: 40px;
+  align-items: flex-end; 
 }
 
 .burger span {
