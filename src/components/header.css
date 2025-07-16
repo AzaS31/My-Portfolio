@@ -75,10 +75,11 @@
 
 @media (max-width: 768px) {
     .logo {
-        background: none;
-        -webkit-text-fill-color: #fff;
-        color: #fff;
-        animation: none;
+        background: none !important;
+        -webkit-background-clip: initial !important;
+        -webkit-text-fill-color: #fff !important;
+        color: #fff !important;
+        animation: none !important;
     }
 
     .nav {
